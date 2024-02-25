@@ -1,8 +1,0 @@
-<map id="org.springframework.samples.petclinic.model.NamedEntity" name="org.springframework.samples.petclinic.model.NamedEntity">
-<area shape="rect" id="node1" title=" " alt="" coords="479,57,767,98"/>
-<area shape="rect" id="node4" href="$classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_pet.html" title=" " alt="" coords="815,5,1121,32"/>
-<area shape="rect" id="node5" href="$classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_pet_type.html" title=" " alt="" coords="825,57,1111,98"/>
-<area shape="rect" id="node6" href="$classorg_1_1springframework_1_1samples_1_1petclinic_1_1vet_1_1_specialty.html" title=" " alt="" coords="833,122,1103,163"/>
-<area shape="rect" id="node2" href="$classorg_1_1springframework_1_1samples_1_1petclinic_1_1model_1_1_base_entity.html" title=" " alt="" coords="143,57,431,98"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,64,95,91"/>
-</map>
