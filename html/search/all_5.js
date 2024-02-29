@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['getaddress_0',['getAddress',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_owner.html#ace0a9dec58d326b1e5ca24e18175ae85',1,'org::springframework::samples::petclinic::owner::Owner']]],
+  ['getbirthdate_1',['getBirthDate',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_pet.html#a14b10b5b35fb9f8ac7e17d14b8cfed52',1,'org::springframework::samples::petclinic::owner::Pet']]],
+  ['getcity_2',['getCity',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_owner.html#af8560c4907171f2c1d27cfb5dde9b119',1,'org::springframework::samples::petclinic::owner::Owner']]],
+  ['getdate_3',['getDate',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_visit.html#adb3ebee19f8448158af95eaade534a7b',1,'org::springframework::samples::petclinic::owner::Visit']]],
+  ['getdescription_4',['getDescription',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_visit.html#a8e2c3a8caf6e4d2609c40e35126b33ab',1,'org::springframework::samples::petclinic::owner::Visit']]],
+  ['getfirstname_5',['getFirstName',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1model_1_1_person.html#ac8eadba4f9e81e5f71ee792234ac82b4',1,'org::springframework::samples::petclinic::model::Person']]],
+  ['getid_6',['getId',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1model_1_1_base_entity.html#ad9b8207776a2b21f5f7c6b398cd9b0a2',1,'org::springframework::samples::petclinic::model::BaseEntity']]],
+  ['getlastname_7',['getLastName',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1model_1_1_person.html#ad0b60d39ddb8ae0e01882686dd811f03',1,'org::springframework::samples::petclinic::model::Person']]],
+  ['getname_8',['getName',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1model_1_1_named_entity.html#a6832c800846fae877f5802aca023eb31',1,'org::springframework::samples::petclinic::model::NamedEntity']]],
+  ['getnrofspecialties_9',['getNrOfSpecialties',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1vet_1_1_vet.html#af00624ecf88aaa9fdf15f6a2cb3283ef',1,'org::springframework::samples::petclinic::vet::Vet']]],
+  ['getpet_10',['getPet',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_owner.html#a2ff6615d2e6b0f2701ec7547fcbb75cd',1,'org.springframework.samples.petclinic.owner.Owner.getPet(String name)'],['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_owner.html#a26abf1277c7f64bb4fbdc3a83b993378',1,'org.springframework.samples.petclinic.owner.Owner.getPet(Integer id)'],['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_owner.html#a6e59d1a009a29b83690a40256fd21995',1,'org.springframework.samples.petclinic.owner.Owner.getPet(String name, boolean ignoreNew)']]],
+  ['getpets_11',['getPets',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_owner.html#a7dffe4cb5018d806ce5f904f310ab060',1,'org::springframework::samples::petclinic::owner::Owner']]],
+  ['getspecialties_12',['getSpecialties',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1vet_1_1_vet.html#a7cd64c65fbf5089b5c47ae4d3008c753',1,'org::springframework::samples::petclinic::vet::Vet']]],
+  ['getspecialtiesinternal_13',['getSpecialtiesInternal',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1vet_1_1_vet.html#acf00cf7df3cc055c65bd5dcede740f33',1,'org::springframework::samples::petclinic::vet::Vet']]],
+  ['gettelephone_14',['getTelephone',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_owner.html#a932eed5ec9300a2647feaef73c374fbe',1,'org::springframework::samples::petclinic::owner::Owner']]],
+  ['gettype_15',['getType',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_pet.html#aa9c166834e5c72d633fe0ac08217081a',1,'org::springframework::samples::petclinic::owner::Pet']]],
+  ['getvetlist_16',['getVetList',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1vet_1_1_vets.html#af336e92b322323ee7876e3297d296f4d',1,'org::springframework::samples::petclinic::vet::Vets']]],
+  ['getvisits_17',['getVisits',['../classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_pet.html#a1e2515d3c5be2f0fb73d85ca759be131',1,'org::springframework::samples::petclinic::owner::Pet']]]
+];

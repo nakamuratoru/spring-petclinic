@@ -1,0 +1,9 @@
+<map id="org.springframework.samples.petclinic.owner.OwnerRepository.findById" name="org.springframework.samples.petclinic.owner.OwnerRepository.findById">
+<area shape="rect" id="node1" title=" " alt="" coords="340,169,627,211"/>
+<area shape="rect" id="node2" href="$classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_pet_controller.html#a934f499a079e18b30991dae0f77a4f2c" title=" " alt="" coords="5,5,292,47"/>
+<area shape="rect" id="node3" href="$classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_owner_controller.html#ad08c0439fc71d6d5b85160c46b9d95ee" title=" " alt="" coords="5,71,292,112"/>
+<area shape="rect" id="node4" href="$classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_pet_controller.html#a2959d391fc9f319cc36c4108e8900d2f" title=" " alt="" coords="5,136,292,177"/>
+<area shape="rect" id="node5" href="$classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_owner_controller.html#a44697453dac54d452b948bba16528ca5" title=" " alt="" coords="5,201,292,243"/>
+<area shape="rect" id="node6" href="$classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_visit_controller.html#a2477a950c9ff3f918e60b26ee2f68519" title=" " alt="" coords="5,267,292,308"/>
+<area shape="rect" id="node7" href="$classorg_1_1springframework_1_1samples_1_1petclinic_1_1owner_1_1_owner_controller.html#a37f2880307b8e2f2d3aa914d289ecea1" title=" " alt="" coords="5,332,292,373"/>
+</map>
