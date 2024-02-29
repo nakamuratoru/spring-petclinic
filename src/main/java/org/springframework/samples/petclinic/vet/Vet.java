@@ -1,19 +1,20 @@
+package org.springframework.samples.petclinic.vet;
+
 /*
  * Copyright 2012-2019 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
+ * you may not use this file except in compliance with the License;
  * You may obtain a copy of the License at
  *
  *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
+ * distributed under the License is distributed on an "AS IS" basis,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.samples.petclinic.vet;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -45,35 +46,59 @@ import jakarta.xml.bind.annotation.XmlElement;
 @Table(name = "vets")
 public class Vet extends Person {
 
-	@ManyToMany(fetch = FetchType.EAGER)
-	@JoinTable(name = "vet_specialties", joinColumns = @JoinColumn(name = "vet_id"),
-			inverseJoinColumns = @JoinColumn(name = "specialty_id"))
-	private Set<Specialty> specialties;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "vet_specialties", joinColumns = @JoinColumn(name = "vet_id"),
+            inverseJoinColumns = @JoinColumn(name = "specialty_id"))
+    private Set<Specialty> specialties;
 
-	protected Set<Specialty> getSpecialtiesInternal() {
-		if (this.specialties == null) {
-			this.specialties = new HashSet<>();
-		}
-		return this.specialties;
-	}
+    /**
+     * Get the list of specialties associated with this vet.
+     *
+     * @return List of specialties
+     */
+    protected Set<Specialty> getSpecialtiesInternal() {
+        if (this.specialties == null) {
+            this.specialties = new HashSet<>();
+        }
+        return this.specialties;
+    }
 
-	protected void setSpecialtiesInternal(Set<Specialty> specialties) {
-		this.specialties = specialties;
-	}
+    /**
+     * Set the specialties for this vet.
+     *
+     * @param specialties Set of specialties
+     */
+    protected void setSpecialtiesInternal(Set<Specialty> specialties) {
+        this.specialties = specialties;
+    }
 
-	@XmlElement
-	public List<Specialty> getSpecialties() {
-		List<Specialty> sortedSpecs = new ArrayList<>(getSpecialtiesInternal());
-		PropertyComparator.sort(sortedSpecs, new MutableSortDefinition("name", true, true));
-		return Collections.unmodifiableList(sortedSpecs);
-	}
+    /**
+     * Get the specialties of this vet sorted by name.
+     *
+     * @return List of sorted specialties
+     */
+    @XmlElement
+    public List<Specialty> getSpecialties() {
+        List<Specialty> sortedSpecs = new ArrayList<>(getSpecialtiesInternal());
+        PropertyComparator.sort(sortedSpecs, new MutableSortDefinition("name", true, true));
+        return Collections.unmodifiableList(sortedSpecs);
+    }
 
-	public int getNrOfSpecialties() {
-		return getSpecialtiesInternal().size();
-	}
+    /**
+     * Get the number of specialties this vet has.
+     *
+     * @return Number of specialties
+     */
+    public int getNrOfSpecialties() {
+        return getSpecialtiesInternal().size();
+    }
 
-	public void addSpecialty(Specialty specialty) {
-		getSpecialtiesInternal().add(specialty);
-	}
-
+    /**
+     * Add a specialty to the vet.
+     *
+     * @param specialty Specialty to add
+     */
+    public void addSpecialty(Specialty specialty) {
+        getSpecialtiesInternal().add(specialty);
+    }
 }

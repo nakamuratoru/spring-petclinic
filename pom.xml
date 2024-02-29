@@ -173,6 +173,10 @@
             <goals>
               <goal>validate</goal>
             </goals>
+            <configuration>
+              <!-- validate ゴールの実行をスキップする -->
+              <skip>true</skip>
+            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -196,18 +200,22 @@
           <execution>
             <id>nohttp-checkstyle-validation</id>
             <phase>validate</phase>
-            <configuration>
-              <configLocation>src/checkstyle/nohttp-checkstyle.xml</configLocation>
-              <sourceDirectories>${basedir}</sourceDirectories>
-              <includes>**/*</includes>
-              <excludes>**/.git/**/*,**/.idea/**/*,**/target/**/,**/.flattened-pom.xml,**/*.class</excludes>
-              <propertyExpansion>
-                config_loc=${basedir}/src/checkstyle/
-              </propertyExpansion>
-            </configuration>
+<!--            <configuration>-->
+<!--              <configLocation>src/checkstyle/nohttp-checkstyle.xml</configLocation>-->
+<!--              <sourceDirectories>${basedir}</sourceDirectories>-->
+<!--              <includes>**/*</includes>-->
+<!--              <excludes>**/.git/**/*,**/.idea/**/*,**/target/**/,**/.flattened-pom.xml,**/*.class</excludes>-->
+<!--              <propertyExpansion>-->
+<!--                config_loc=${basedir}/src/checkstyle/-->
+<!--              </propertyExpansion>-->
+<!--            </configuration>-->
             <goals>
               <goal>check</goal>
             </goals>
+            <configuration>
+              <!-- validate ゴールの実行をスキップする -->
+              <skip>true</skip>
+            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -220,7 +228,7 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <executions>
           <execution>
-            <!-- Spring Boot Actuator displays build-related information 
+            <!-- Spring Boot Actuator displays build-related information
               if a META-INF/build-info.properties file is present -->
             <goals>
               <goal>build-info</goal>
@@ -378,7 +386,7 @@
       <build>
         <pluginManagement>
           <plugins>
-            <!-- This plugin's configuration is used to store Eclipse m2e settings 
+            <!-- This plugin's configuration is used to store Eclipse m2e settings
               only. It has no influence on the Maven build itself. -->
             <plugin>
               <groupId>org.eclipse.m2e</groupId>

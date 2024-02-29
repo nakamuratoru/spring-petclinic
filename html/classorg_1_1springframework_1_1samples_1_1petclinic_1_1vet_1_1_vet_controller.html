@@ -107,13 +107,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a503503824f0106d27edb09c2c6b807f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Juergen Hoeller </dd>
-<dd>
-Mark Fisher </dd>
-<dd>
-Ken Krebs </dd>
-<dd>
-Arjen Poutsma </dd></dl>
+<div class="textblock"><p >ペットクリニックの獣医を表示するためのコントローラクラス </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7e29eafa1100c7189b9064735266780e" name="a7e29eafa1100c7189b9064735266780e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e29eafa1100c7189b9064735266780e">&#9670;&nbsp;</a></span>VetController()</h2>
@@ -138,6 +132,13 @@ Arjen Poutsma </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >獣医コントロールを初期化するコンストラクタ</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clinicService</td><td>VetRepositoryインスタンス </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -181,6 +182,16 @@ Arjen Poutsma </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >ページネーションの情報をモデルに追加するメソッド</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">page</td><td>ページ番号 </td></tr>
+    <tr><td class="paramname">paginated</td><td>ページオブジェクト </td></tr>
+    <tr><td class="paramname">model</td><td>モデルオブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>獣医リストのページテンプレート </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -216,6 +227,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >指定されたページでページ分割された獣医リストを取得するメソッド</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">page</td><td>ページ番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ページ分割された獣医リスト </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -259,6 +278,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >獣医リストをJSON形式で表示するメソッド</p>
+<dl class="section return"><dt>Returns</dt><dd>JSON形式の獣医リストオブジェクト </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -305,6 +326,15 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >獣医リストを表示するメソッド</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">page</td><td>ページ番号 </td></tr>
+    <tr><td class="paramname">model</td><td>モデルオブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>獣医リストのページテンプレート </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

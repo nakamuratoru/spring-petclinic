@@ -27,52 +27,77 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @author Juergen Hoeller
- * @author Mark Fisher
- * @author Ken Krebs
- * @author Arjen Poutsma
+ * ペットクリニックの獣医を表示するためのコントローラクラス
  */
 @Controller
 class VetController {
 
-	private final VetRepository vetRepository;
+    private final VetRepository vetRepository;
 
-	public VetController(VetRepository clinicService) {
-		this.vetRepository = clinicService;
-	}
+    /**
+     * 獣医コントロールを初期化するコンストラクタ
+     *
+     * @param clinicService VetRepositoryインスタンス
+     */
+    public VetController(VetRepository clinicService) {
+        this.vetRepository = clinicService;
+    }
 
-	@GetMapping("/vets.html")
-	public String showVetList(@RequestParam(defaultValue = "1") int page, Model model) {
-		// Here we are returning an object of type 'Vets' rather than a collection of Vet
-		// objects so it is simpler for Object-Xml mapping
-		Vets vets = new Vets();
-		Page<Vet> paginated = findPaginated(page);
-		vets.getVetList().addAll(paginated.toList());
-		return addPaginationModel(page, paginated, model);
-	}
+    /**
+     * 獣医リストを表示するメソッド
+     *
+     * @param page ページ番号
+     * @param model モデルオブジェクト
+     * @return 獣医リストのページテンプレート
+     */
+    @GetMapping("/vets.html")
+    public String showVetList(@RequestParam(defaultValue = "1") int page, Model model) {
+        Vets vets = new Vets();
+        Page<Vet> paginated = findPaginated(page);
+        vets.getVetList().addAll(paginated.toList());
+        return addPaginationModel(page, paginated, model);
+    }
 
-	private String addPaginationModel(int page, Page<Vet> paginated, Model model) {
-		List<Vet> listVets = paginated.getContent();
-		model.addAttribute("currentPage", page);
-		model.addAttribute("totalPages", paginated.getTotalPages());
-		model.addAttribute("totalItems", paginated.getTotalElements());
-		model.addAttribute("listVets", listVets);
-		return "vets/vetList";
-	}
+    /**
+     * ページネーションの情報をモデルに追加するメソッド
+     *
+     * @param page ページ番号
+     * @param paginated ページオブジェクト
+     * @param model モデルオブジェクト
+     * @return 獣医リストのページテンプレート
+     */
+    private String addPaginationModel(int page, Page<Vet> paginated, Model model) {
+        List<Vet> listVets = paginated.getContent();
+        model.addAttribute("currentPage", page);
+        model.addAttribute("totalPages", paginated.getTotalPages());
+        model.addAttribute("totalItems", paginated.getTotalElements());
+        model.addAttribute("listVets", listVets);
+        return "vets/vetList";
+    }
 
-	private Page<Vet> findPaginated(int page) {
-		int pageSize = 5;
-		Pageable pageable = PageRequest.of(page - 1, pageSize);
-		return vetRepository.findAll(pageable);
-	}
+    /**
+     * 指定されたページでページ分割された獣医リストを取得するメソッド
+     *
+     * @param page ページ番号
+     * @return ページ分割された獣医リスト
+     */
+    private Page<Vet> findPaginated(int page) {
+        int pageSize = 5;
+        Pageable pageable = PageRequest.of(page - 1, pageSize);
+        return vetRepository.findAll(pageable);
+    }
 
-	@GetMapping({ "/vets" })
-	public @ResponseBody Vets showResourcesVetList() {
-		// Here we are returning an object of type 'Vets' rather than a collection of Vet
-		// objects so it is simpler for JSon/Object mapping
-		Vets vets = new Vets();
-		vets.getVetList().addAll(this.vetRepository.findAll());
-		return vets;
-	}
+    /**
+     * 獣医リストをJSON形式で表示するメソッド
+     *
+     * @return JSON形式の獣医リストオブジェクト
+     */
+    @GetMapping({ "/vets" })
+    public @ResponseBody Vets showResourcesVetList() {
+        Vets vets = new Vets();
+        vets.getVetList().addAll(this.vetRepository.findAll());
+        return vets;
+    }
 
 }
+

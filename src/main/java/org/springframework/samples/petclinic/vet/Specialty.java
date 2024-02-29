@@ -29,4 +29,38 @@ import jakarta.persistence.Table;
 @Table(name = "specialties")
 public class Specialty extends NamedEntity {
 
+    /**
+     * コンストラクタ
+     */
+    public Specialty() {
+        super();
+    }
+
+    /**
+     * スペシャルティの名前を設定します
+     *
+     * 使用例:
+     * Specialty specialty = new Specialty();
+     * specialty.setName("Dentistry");
+     * specialty.setId(1);
+     *
+     * @param name スペシャルティの名前
+     */
+    public void setName(String name) {
+        super.setName(name);
+    }
+
+    /**
+     * スペシャルティのIDを設定します
+     *
+     * 使用例:
+     * Specialty specialty = new Specialty();
+     * specialty.setName("Dentistry");
+     * specialty.setId(1);
+     *
+     * @param id スペシャルティのID
+     */
+    public void setId(int id) {
+        super.setId(id);
+    }
 }
