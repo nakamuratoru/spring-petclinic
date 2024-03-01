@@ -27,28 +27,48 @@ import jakarta.validation.constraints.NotBlank;
 @MappedSuperclass
 public class Person extends BaseEntity {
 
-	@Column(name = "first_name")
-	@NotBlank
-	private String firstName;
+    @Column(name = "first_name")
+    @NotBlank
+    private String firstName;
 
-	@Column(name = "last_name")
-	@NotBlank
-	private String lastName;
+    @Column(name = "last_name")
+    @NotBlank
+    private String lastName;
 
-	public String getFirstName() {
-		return this.firstName;
-	}
+    /**
+     * ファーストネームを取得する。
+     * 
+     * @return ファーストネーム
+     */
+    public String getFirstName() {
+        return this.firstName;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    /**
+     * ファーストネームを設定する。
+     * 
+     * @param firstName 設定するファーストネーム
+     */
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public String getLastName() {
-		return this.lastName;
-	}
+    /**
+     * ラストネームを取得する。
+     * 
+     * @return ラストネーム
+     */
+    public String getLastName() {
+        return this.lastName;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    /**
+     * ラストネームを設定する。
+     * 
+     * @param lastName 設定するラストネーム
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
 }
